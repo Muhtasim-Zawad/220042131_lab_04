@@ -22,4 +22,16 @@ public class Transaction {
     public String getDescription() {
         return description;
     }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }

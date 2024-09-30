@@ -1,7 +1,5 @@
-import java.util.Comparator;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 public class StatementAnalyzer {
     private List<Transaction> transactions;
@@ -11,18 +9,38 @@ public class StatementAnalyzer {
     }
 
     public double calcTotalBalance() {
-        return 0;
+        double totalBalance = 0;
+        for (Transaction transaction : transactions) {
+            totalBalance += transaction.getAmount();
+        }
+        return totalBalance;
     }
 
     public long countTransactionsInMonth(String month) {
-        return 0;
+        long count = 0;
+        for (Transaction transaction : transactions) {
+            if (transaction.getDate().equals("month")) {
+                count += 1;
+            }
+        }
+        return count;
     }
 
-    public List<Transaction> getTopExpenses(int topN) {
+    public List<Transaction> getTopExpenses() {
+        transactions = new ArrayList<Transaction>();
+        for (Transaction transaction : transactions) {
+
+
+        }
         return null;
     }
 
     public String getTopSpendingCategory() {
+        String category = "";
+        double tempBalance = 0;
+        for (Transaction transaction : transactions) {
+            if (transaction.getAmount() >=  tem) {}
+        }
         return null;
     }
 }
