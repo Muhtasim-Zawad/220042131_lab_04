@@ -1,6 +1,7 @@
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.List;
 
 public interface TransactionParser {
-    List<Transaction> parse(String filePath) throws FileNotFoundException;
+    List<Transaction> parse(String filePath) throws IOException;
 }
